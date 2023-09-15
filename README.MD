@@ -7,3 +7,4 @@ estas clases se usan en el main
 
 se puede utilizar tambien el archivo red-neuronal-AND.js para ejecutar la red neuronal pero paso a paso
 
+Fuente del ejercicio: https://www.youtube.com/watch?v=Woe8fXttC6E
