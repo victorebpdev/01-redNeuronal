@@ -24,9 +24,9 @@ class NeuralNetwork {
         this.results=[];
     }
     beginTraining(){        
-        let i=0;
+        let epocas=0;
         while(true){
-            if(i >=10){
+            if(epocas >=10){
                 return this;
             }
            for (let j = 0; j < this.datosI.length  ; j++) {
@@ -67,8 +67,8 @@ class NeuralNetwork {
             }
             this.results.push(results);
         } 
-        i++;           
-        this.ciclo = i;
+        epocas++;           
+        this.ciclo = epocas;
         }       
     };
 

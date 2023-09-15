@@ -106,7 +106,7 @@ const trainningW = (strWeights)=>{
 
 const trainning = ()=>{
   if (error != 0){
-    console.log('Utilice opcion 1, Existe un error al entranar red')
+    console.log('Utilice opcion 3, Existe un error al entrenar red')
     return;
   }
 

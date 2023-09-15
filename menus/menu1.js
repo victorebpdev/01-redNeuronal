@@ -1,7 +1,7 @@
  const menu1 = {
     type:'list',
     name:'option',
-    message:'What would you like to do?',
+    message:'Que desea hacer?, (utilice una sola vez la opcion 1), para establecer los pesos, recuerde respetar formato  ej:0.1,0.3)?',
     choices: [
         {
             value: '1',
@@ -18,10 +18,11 @@
         {
             value: '4',
             name: `${'4. '.green +'Results'}`
-        },    {
-            value: '5',
-            name: `${'5. '.green +'Save DATA'}`
-        },        
+        },
+        // {
+        //     value: '5',
+        //     name: `${'5. '.green +'Save DATA'}`
+        // },        
         {
             value: '0',
             name: `${'0. '.green +'Exit'}`
