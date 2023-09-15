@@ -2,12 +2,24 @@ import inquirer  from 'inquirer';
 import colors from 'colors';
 import  menu1  from '../menus/menu1.js';
 import  menu2  from '../menus/menu2.js';
-const questions = [
-    menu2
-];
+const questions = [];
+const setMenu = (opcion)=>{ 
+    switch (opcion) {
+        case 1:
+            questions[0] = menu1
+            break;
+        case 2: 
+            questions[0]  = menu2
+            break;
+        default:
+            questions[0]  = menu1
+            break;
+    }
 
+}
 
-const inquirerMenu = async () => {
+const inquirerMenu = async (opcion) => {
+    setMenu(opcion);
     console.clear();
     console.log('======================'.green);
     console.log('Choose an option'.green);
@@ -77,4 +89,5 @@ export {
     exit,
     readInput,
     confirm,
+    setMenu
 }

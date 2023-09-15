@@ -5,11 +5,15 @@ console.clear();
 const main = async() => {
     let opt = '';
     do{
-      opt = await inquirerMenu();
+      opt = await inquirerMenu(2);
       switch (opt) {
         case '1':
           const NNetwork = new NeuralNetwork();
-            console.log('test',NNetwork);
+          NNetwork.beginTraining()
+          let arr = NNetwork.results;      
+          let data = arr[arr.length -1]
+          console.log('data:',data);
+         
           break;
       }
       await exit();

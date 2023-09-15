@@ -1,5 +1,6 @@
 import colors from 'colors';
 import  {exit, inquirerMenu, readInput,  confirm, }  from './helpers/inquirer.js';
+
 console.clear();
 
 /**
@@ -20,6 +21,7 @@ let bUmbral =0.0;
 let gw1 = 0.0;
 let gw2 = 0.0;
 let error = 0.0;
+let totalErrores=0;
 let resultados = [];
 let iteracion = 0;
 let ciclo = 0;
@@ -34,7 +36,7 @@ const main = async() => {
 
     do{
 
-      opt = await inquirerMenu();
+      opt = await inquirerMenu(1);
       switch (opt) {
         case '1':
             const desc = await readInput('Pesos(0.1,0.2): ');
@@ -127,6 +129,7 @@ const trainning = ()=>{
   if (error != 0){
     bUmbral = umbral;
     umbral = newUmbral;
+    totalErrores++;
   }
   let resultado = {
       'Ciclo': ciclo,
